@@ -1,0 +1,16 @@
+name: sched_switch
+ID: 100
+format:
+ field:unsigned short common_type; offset:0; size:2; signed:0;
+ field:unsigned char common_flags; offset:2; size:1; signed:0;
+ field:unsigned char common_preempt_count; offset:3; size:1; signed:0;
+ field:int common_pid; offset:4; size:4; signed:1;
+
+ field:char prev_comm[16]; offset:8; size:16; signed:1;
+ field:pid_t prev_pid; offset:24; size:4; signed:1;
+ field:int prev_prio; offset:28; size:4; signed:1;
+ field:long prev_state; offset:32; size:4; signed:1;
+ field:char next_comm[16]; offset:36; size:16; signed:1;
+ field:pid_t next_pid; offset:52; size:4; signed:1;
+ field:int next_prio; offset:56; size:4; signed:1;
+print fmt: "prev_pid=%d ==> next_pid=%d", REC->prev_pid, REC->next_pid

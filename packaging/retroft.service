@@ -1,0 +1,36 @@
+[Unit]
+Description=Retroft trace recorder
+Requires=retroft.socket
+After=local-fs.target retroft.socket
+ConditionPathIsDirectory=/sys/kernel/tracing/instances
+
+# For capture storage on a separate mount, uncomment and adjust this path:
+# RequiresMountsFor=/data/traces/retroft
+
+[Service]
+Type=notify
+NotifyAccess=main
+ExecStart=/usr/local/bin/retroft --socket /run/retroft.sock --instance retroft --instance-owner /run/retroft/instance.owner --output /var/lib/retroft --idle-report 60s --syscalls --irqs
+RuntimeDirectory=retroft
+RuntimeDirectoryMode=0700
+# Keep crash-recovery ownership across stops as well as restarts, until reboot.
+RuntimeDirectoryPreserve=yes
+# StateDirectory creates /var/lib/retroft; the prefix /var/lib is implicit.
+# To store captures elsewhere, replace --output /var/lib/retroft in ExecStart
+# above with your path, for example --output /data/traces/retroft, and remove
+# or comment out both StateDirectory settings below. Provision the output directory
+# on the intended filesystem beforehand; Retroft requires it to exist.
+# UMask=0077 keeps new session directories and capture files private.
+# Use the matching RequiresMountsFor setting above if storage is separately mounted.
+StateDirectory=retroft
+StateDirectoryMode=0700
+UMask=0077
+Nice=19
+CPUSchedulingPolicy=other
+IOSchedulingClass=idle
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=30
+
+[Install]
+WantedBy=multi-user.target

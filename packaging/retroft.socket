@@ -1,0 +1,12 @@
+[Unit]
+Description=Retroft trigger socket
+
+[Socket]
+Service=retroft.service
+ListenDatagram=/run/retroft.sock
+SocketMode=0600
+PassCredentials=yes
+FlushPending=no
+
+[Install]
+WantedBy=sockets.target

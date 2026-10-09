@@ -1,0 +1,25 @@
+[workspace]
+members = ["crates/retroft-format", "crates/retroft", "crates/retroft-trigger", "crates/retroft-export"]
+default-members = ["crates/retroft"]
+resolver = "2"
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+
+[workspace.dependencies]
+anyhow = "1"
+clap = { version = "4", features = ["derive"] }
+crc32c = "0.6"
+io-uring = "0.7"
+libc = "0.2"
+humantime = "2.4"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+lz4 = "1"
+tempfile = "3"
+prost = "0.13"
+
+[profile.release]
+lto = "thin"
+codegen-units = 1

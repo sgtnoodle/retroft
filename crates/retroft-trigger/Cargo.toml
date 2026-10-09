@@ -1,0 +1,17 @@
+[package]
+license = "MIT"
+authors = ["Jeff Rogers"]
+name = "retroft-trigger"
+version = "0.1.0"
+edition = "2021"
+description = "Small Unix-socket client for the Retroft"
+
+[dependencies]
+anyhow.workspace = true
+clap = { workspace = true, features = ["derive"] }
+libc.workspace = true
+humantime.workspace = true
+serde_json.workspace = true
+
+[dev-dependencies]
+tempfile.workspace = true

@@ -1,0 +1,28 @@
+[package]
+license = "MIT"
+authors = ["Jeff Rogers"]
+name = "retroft-export"
+version = "0.1.0"
+edition = "2021"
+description = "Offline Retroft capture validation and Perfetto export"
+
+[dependencies]
+anyhow.workspace = true
+clap = { workspace = true, features = ["derive"] }
+crc32c.workspace = true
+retroft-format = { path = "../retroft-format" }
+serde = { workspace = true, features = ["derive"] }
+serde_json.workspace = true
+lz4.workspace = true
+
+[dev-dependencies]
+tempfile.workspace = true
+prost.workspace = true
+
+[[bin]]
+name = "retroft-export"
+path = "src/main.rs"
+
+[[bin]]
+name = "retroft-validate"
+path = "src/bin/retroft-validate.rs"

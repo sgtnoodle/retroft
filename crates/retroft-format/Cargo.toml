@@ -1,0 +1,11 @@
+[package]
+license = "MIT"
+authors = ["Jeff Rogers"]
+name = "retroft-format"
+version.workspace = true
+edition.workspace = true
+description = "Small shared capture framing and CRC32C writer, without offline decoding"
+
+[dependencies]
+anyhow.workspace = true
+crc32c.workspace = true

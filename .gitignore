@@ -1,0 +1,13 @@
+/target/
+/captures/
+*.retroft
+*.pftrace
+
+# Local tooling and credentials
+/.agents/
+/.aws/
+/.codex/
+
+# Python test artifacts
+__pycache__/
+*.pyc

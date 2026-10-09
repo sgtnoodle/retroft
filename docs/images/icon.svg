@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 320 320" role="img" aria-label="Retroft penguin with digital timing pulse and retro-colored scheduling lanes"><rect width="320" height="320" rx="58" fill="#17272e"/><g transform="translate(0 19)"><g>
+<g fill="#edba59"><rect x="25" y="72" width="179" height="21" rx="6"/><rect x="213" y="72" width="70" height="21" rx="6"/></g>
+<g fill="#e58a4e"><rect x="9" y="100" width="76" height="21" rx="6"/><rect x="94" y="100" width="214" height="21" rx="6"/></g>
+<g fill="#d96555"><rect x="20" y="128" width="213" height="21" rx="6"/><rect x="242" y="128" width="72" height="21" rx="6"/></g>
+<g fill="#b64f63"><rect x="6" y="156" width="61" height="21" rx="6"/><rect x="76" y="156" width="218" height="21" rx="6"/></g>
+<g fill="#559b94"><rect x="27" y="184" width="198" height="21" rx="6"/><rect x="234" y="184" width="66" height="21" rx="6"/></g>
+</g><g stroke="#17272e" stroke-width="8" stroke-linejoin="round">
+<path d="M114 106C91 119 73 145 68 177l38-21M206 106c23 13 41 39 46 71l-38-21" fill="#76b4a5"/>
+<path d="M102 207V94c0-43 22-70 58-70s58 27 58 70v113c0 22-24 36-58 36s-58-14-58-36z" fill="#76b4a5"/>
+<path d="M120 222v-97c0-26 16-43 40-43s40 17 40 43v97c-11 10-24 14-40 14s-29-4-40-14z" fill="#f6e5c5" stroke="none"/>
+</g>
+<circle cx="140" cy="71" r="6" fill="#17272e"/><circle cx="180" cy="71" r="6" fill="#17272e"/>
+<path d="M147 88h26l-13 15z" fill="#edba59"/>
+<path d="M112 233l-20 17h51v-14M177 236v14h51l-20-17" fill="#edba59"/>
+<path d="M120 169h21v-28h29v28h30" fill="none" stroke="#17272e" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="200" cy="169" r="6" fill="#17272e"/></g></svg>
